@@ -12,3 +12,10 @@ sudo apt install docker-ce -y
 
 sudo systemctl status docker
 
+sudo docker run --name postgresqldb -e POSTGRES_USER=myusername -e POSTGRES_PASSWORD=mypassword -p 5432:5432 -v /data:/var/lib/postgresql/data -d postgres
+
+sudo docker ps
+
+sudo docker start postgresqldb
+
+sudo docker stop postgresqldb
